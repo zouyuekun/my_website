@@ -1,0 +1,1069 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans SC', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    font-size: 62.5%;
+    background: rgb(255, 255, 255);
+
+}
+
+#all-content{
+    display:flex
+    flex-direction: column;
+}
+
+    /* 统一定义链接规则 */
+
+    a:link{
+        color: #0055ff;
+        text-decoration: none;
+    }
+    a:visited{
+        color:#0055ff;
+        text-decoration: none;
+    }
+    a:hover{
+        color: #0055ff;
+        text-decoration: underline;
+    }
+    a:active{
+        color:#0000FF;
+        text-decoration: none;
+    }
+/*----------------------------------------------------------------------------
+/* 导航栏 */
+
+header{
+    grid-area: nav;
+    position: -webkit-sticky;
+    position:sticky;
+    top:2em;
+    z-index: 2;
+    /* background: rgb(147, 154, 168); */
+    /* margin:2em 4em; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header nav ul{
+    display: flex;
+    justify-content: flex-end;
+}
+
+header nav ul li{
+    /* display: inline-block */
+    margin: 0 2.4em 0 0;
+    list-style-type:none;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.5rem;
+    line-height: 150%;
+    color: #0055FF;
+}
+
+header div.logo a{
+    margin: 2em;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 150%;
+    /* background: rgb(135, 150, 118); */
+    color: #0055FF;
+}
+
+
+
+/*----------------------------------------------------------------------------
+/* live by design */
+section.livebydesign{
+    grid-area: live;
+    /* background: rgb(158, 133, 131); */
+    position: relative;
+    box-sizing:border-box;
+    height: 11em;
+    padding: 8%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* background: rgb(156, 156, 156); */
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 7rem;
+    line-height: 150%;
+
+    color: #0055FF;
+    position: relative;
+
+}
+
+section.livebydesign div.img img{
+    max-width:4em;
+    position: absolute;
+    left:40%;
+    top: 37%;
+    display: flex;
+    justify-content: center;
+    z-index: -1;
+}
+
+
+
+/*----------------------------------------------------------------------------
+/* 网站的意义 */
+
+section.yiyi{
+    grid-area: yiyi;
+    box-sizing:border-box;
+
+    /* background: rgb(156, 185, 160); */
+    height: 80em;
+    padding: 15%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #0055FF;
+
+}
+section.yiyi p{
+    text-align: center;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 3rem;
+    line-height: 160%;
+}
+
+/*----------------------------------------------------------------------------*/
+
+/* 自我介绍 */
+
+/* 整体内容区 */
+section.jieshao {
+    box-sizing:border-box;
+    /* height: 90em; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:minmax(700px,1000px);
+    grid-column-gap: 8%;
+    grid-template-areas:
+    "jieshao-left jieshao-right";
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    position: relative;
+}
+
+/* 左侧图片区 */
+section.jieshao div.img{
+    /* position: absolute;
+    left: 15%; */
+    justify-items: flex-end;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    /* background: rgb(90, 108, 110); */
+    box-sizing:border-box;
+
+}
+
+/* 右侧文字区 */
+section.jieshao div.content{
+    /* position: absolute;
+    right:15%; */
+    grid-area: jieshao-right;
+    justify-items: flex-start;
+    /* margin: 6em; */
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+
+    /* background: rgb(216, 203, 166); */
+    box-sizing:border-box;
+
+}
+
+/* 头像图片 */
+section.jieshao div.img img{
+    justify-items: flex-end;
+    width: 35em;
+    /* background: rgb(121, 146, 196); */
+    -webkit-transform 2s; /* For Safari 3.1 to 6.0 */
+    transition: transform 2s;
+}
+
+/* 头像图片 */
+section.jieshao div.img img:hover{
+    justify-items: flex-end;
+    width: 35em;
+    /* background: rgb(121, 146, 196); */
+    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+    transform: rotate(180deg);
+}
+
+
+/* 我是越昆 */
+
+section.jieshao div.content p.woshiyuekun{
+    margin:0 0 0.5em 0;
+    /* width: 8em; */
+
+    /* background:rgb(255, 255, 255); */
+    font-style: normal;
+    font-weight: 600;
+    font-size: 5rem;
+    line-height: 120%;
+    text-align: left;
+
+    color: #0055FF;
+}
+
+/* 前半辈子的介绍 */
+section.jieshao div.content p.qian{
+    margin:0px 0 2em 0;
+    max-width: 18em;
+    /* width: 24em; */
+
+    /* background:rgb(161, 214, 194); */
+
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.5rem;
+    line-height: 150%;
+    text-align: left;
+
+    color: #0055FF;
+}
+
+/* 吹牛标题 */
+section.jieshao div.content p.chuiniu{
+    margin:0 0 0.6em 0;
+    /* width: 24em; */
+
+    /* background:rgb(161, 188, 214); */
+
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 150%;
+    text-align: left;
+
+    color: #0055FF;
+}
+
+/* 做过很多很多的事 */
+section.jieshao div.content p.zouguo{
+    margin:0 0 0.6em 0;
+    max-width: 26em;
+    /* width: 37em; */
+
+    /* background:rgb(214, 213, 161); */
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 160%;
+    text-align: left;
+
+    color: #0055FF;
+}
+
+/*----------------------------------------------------------------------------*/
+
+/* 履历 */
+
+
+/* 整体的框框 */
+
+section.lvli{
+
+    box-sizing:border-box;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: minmax(700px,1000px);
+    grid-column-gap: 8%;
+    grid-template-areas:
+    "lvli-left lvli-right";
+    align-items: center;
+    justify-content: center;
+}
+
+/* 左边大标题区 */
+section.lvli div.left-title{
+    padding: 0 5% 0 0;
+    grid-area: lvli-left;
+    box-sizing:border-box;
+    /* background: rgb(177, 155, 155); */
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+/* 左边履历+resem 文字 */
+section.lvli div.left-title div.left-title{
+
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+}
+
+
+/* 右边文字内容区 */
+section.lvli div.right-content{
+
+    grid-area: lvli-right;
+    box-sizing:border-box;
+    /* background: rgb(110, 92, 92); */
+    display: flex;
+    flex-direction: column;
+    align-items: left
+    justify-content: center
+
+}
+
+/* 标题履 */
+section.lvli div.left-title p.lv{
+
+    box-sizing:border-box;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14rem;
+    line-height: 120%;
+
+    color: #0055FF;
+}
+
+/* 标题历 */
+section.lvli div.left-title p.li{
+
+    box-sizing:border-box;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14rem;
+    line-height: 120%;
+
+    color: #0055FF;
+}
+/* 标题红字英文 */
+section.lvli div.left-title p.resume{
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 120%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #E43A2F;
+
+    -webkit-transform 2s; /* For Safari 3.1 to 6.0 */
+    transition: transform 2s;
+}
+
+section.lvli div.left-title p.resume:hover{
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 120%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #E43A2F;
+    -webkit-transform: rotate(360deg); /* Chrome, Safari, Opera */
+    transform: rotate(360deg);
+}
+
+
+
+/* 履历-十年经验 */
+section.lvli div.right-content p{
+
+    margin:0px 0 1em 0;
+    max-width: 12em;
+
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 150%;
+    text-align: left;
+    color: #0055FF;
+
+}
+
+/* 履历-上横线 */
+section.lvli div.right-content div.pingtai HR.line1{
+
+    max-width: 30em;
+    border:  0.5px solid #0055FF;
+    display: flex;
+    justify-content:
+
+}
+
+/* 履历平台-四个列表 */
+
+section.lvli div.pingtai p{
+
+    margin:1em 0 1em 0;
+    max-width: 30em;
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 200%;
+    text-align: left;
+
+    color: #0055FF;
+}
+
+
+/* 履历-下横线 */
+section.lvli div.right-content div.pingtai HR.line2{
+    margin:0 0 2em 0;
+    max-width: 30em;
+    height: 0px;
+    border:  0.5px solid #0055FF;
+}
+
+
+/* 履历-历年经历 */
+section.lvli div.right-content div.jingli p{
+
+    max-width: 30em;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.2rem;
+    line-height: 200%;
+    text-align: left;
+
+    color: #0055FF;
+
+}
+/*----------------------------------------------------------------------------*/
+
+/* life is short */
+
+
+/* 整体内容区 */
+section.life{
+    grid-area: short;
+    box-sizing:border-box;
+    /* background: rgb(133, 160, 128); */
+    height: 80em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+}
+
+/* 整体文字内容区 */
+section.life div.short{
+
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    position: absolute;
+    /* left:25%; */
+    /* background: rgb(129, 143, 172); */
+    /* position:relativ; */
+
+}
+
+/* 图片区块 */
+section.life div.img{
+    /* background: rgb(126, 151, 201); */
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    position: absolute;
+    top:21em;
+    right:25%;
+    z-index: -2;
+
+    /* position:relative;
+    top:-20px;
+    left:-150px; */
+}
+
+/* 爱因斯坦图*/
+section.life div.img img{
+    width: 30em;
+}
+
+/* 背景图形 */
+section.life div.pic1{
+    position: absolute;
+    left: 38%;
+    z-index: -1;
+}
+/* 背景三角*/
+section.life div.pic2{
+    position: absolute;
+    right: 33%;
+    top:40%;
+    z-index: -1;
+}
+
+/* life is short */
+section.life div.short p.word1{
+    /* background: rgb(74, 75, 78); */
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 7rem;
+    line-height: 110%;
+    width: 7em;
+
+    text-align: left;
+
+	-webkit-text-fill-color:transparent;
+    -webkit-text-stroke: 1px #0055FF;
+
+}
+
+/* be creativty */
+
+section.life div.short p.word2{
+    /* background: rgb(123, 98, 129); */
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 7rem;
+    line-height: 110%;
+    text-align: left;
+    width: 7em;
+    margin: 0 0 0.3em 0;
+
+    color: #0055FF;
+
+}
+
+/* 下面是创造过的事 */
+
+section.life div.short p.littleword{
+
+    /* background: rgb(130, 161, 90); */
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.2rem;
+    line-height: 200%;
+    letter-spacing: 0.66em;
+    width: 30em;
+    text-align: left;
+    padding: 0 0 0 3em;
+
+    color: #0055FF;
+}
+
+section.life div.short p.arrow{
+    /* background: #E43A2F; */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 4em;
+    font-weight:lighter;
+
+    z-index: -8;
+
+    position:relative;
+    top:-1.1em;
+
+    color: #0055FF;
+}
+
+
+
+/*----------------------------------------------------------------------------*/
+
+/* 干的漂亮 */
+
+/* 整体的区域规则 */
+section.nice{
+    /* background: rgb(167, 167, 167); */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 8%;
+    grid-template-rows: minmax(700px,1000px);
+    grid-template-areas:
+    "gande-left gande-right";
+    align-items: center;
+    justify-content: center;
+    /* flex-wrap: wrap; */
+    position: relative;
+}
+
+/* 左侧标题区域 */
+section.nice div.left-title{
+    /* background: rgb(154, 154, 175); */
+    grid-area: gande-left;
+    box-sizing:border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+/* 右侧文字区域 */
+section.nice div.right-content{
+    grid-area: gande-right;
+    box-sizing:border-box;
+    /* position: absolute;
+    right: 23%; */
+    /* margin: 6em; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+
+
+/* 文字干的 */
+section.nice div.left-title div.title p.gande{
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12rem;
+    line-height: 100%;
+    /* width: 2em; */
+    text-align: center;
+
+
+    color: #0055FF;
+
+}
+/* 漂亮 */
+section.nice div.left-title div.title p.piaoliang{
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12rem;
+    line-height: 100%;
+    /* width: 2em; */
+
+    text-align: center;
+
+    -webkit-text-fill-color:transparent;
+    -webkit-text-stroke: 1px #0055FF;
+
+}
+
+/* 09ui design */
+
+section.nice div.left-title div.title p.design{
+    padding: 0 0 0 9em;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 100%;
+
+    color: #E43A2F;
+
+    transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+
+
+}
+
+/* 创立了给甲方爸爸。。。 */
+section.nice div.right-content div.content-one p{
+    margin:0 0 1em 0;
+    /* background: rgb(144, 168, 214); */
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 150%;
+
+    text-align: left;
+
+    color: #0055FF;
+    max-width: 16em;
+}
+
+/* 服务过的爸爸 */
+section.nice div.right-content div.content-two p{
+    /* width: 15em; */
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 200%;
+    text-align: left;
+
+    color: #0055FF;
+
+}
+
+/* 客户列表 */
+section.nice div.right-content div.content-three p{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 200%;
+    text-align: left;
+    margin: 0 0 1.5em 0;
+    max-width: 24em;
+
+    color: #0055FF;
+}
+/* 按钮样式 */
+section.nice div.right-content div.button a{
+    background-color: #0055FF;
+    border: none;
+    color: white;
+    padding: 1em 2em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.2rem;
+    /* width: 7em; */
+    outline:none;
+
+    cursor: pointer;
+}
+
+section.nice div.right-content div.button a:hover{
+    background-color: rgb(255, 45, 38);
+}
+
+
+
+
+/* 表情 */
+
+/*----------------------------------------------------------------------------*/
+
+/* 表情整体区域排布规则 */
+section.biaoqing{
+    /* background: rgb(158, 126, 124); */
+    /* height: 140em; */
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:minmax(300px,600px);
+    grid-column-gap: 8%;
+    grid-template-areas:
+    "biaoqing-left biaoqing-right"
+
+
+}
+/* 上半部分-左侧文字标题和图片 */
+section.biaoqing div.title{
+    padding: 0 8% 0 0;
+    grid-area:biaoqing-left;
+    /* background: rgb(108, 153, 112); */
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:flex-end;
+    position: relative;
+}
+
+/* 上半部分-右边文字 */
+section.biaoqing div.content{
+    grid: biaoqing-right;
+    /* background: rgb(168, 147, 146); */
+    max-width: 16em;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.5rem;
+    line-height: 160%;
+    color: #0055FF;
+}
+
+/* 标题表字*/
+section.biaoqing div.title div.title p.biao{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12rem;
+    line-height: 150%;
+    text-align: center;
+
+    color: #0055FF;
+}
+/* 标题情字*/
+section.biaoqing div.title div.title p.qing{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12rem;
+    line-height: 150%;
+    text-align: center;
+
+    color: #0055FF;
+}
+
+/* 笑脸倒过来 */
+section.biaoqing div.title div.bg img{
+    z-index: -1;
+    width: 27.2em;
+    height: 14.6em;
+    position: absolute;
+    top:36%;
+    left:44%;
+}
+
+/* 下半部分*/
+/*----------------------------------------------------------------------------*/
+section.biaoqingimg{
+    margin: 10em 0 30em 0;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid: template rows 1fr 1fr;
+    grid-column-gap: 2%;
+    grid-row-gap: 6%;
+    grid-template-areas:
+    "11 22"
+    "33 44";
+    /* align-items: center;
+    justify-content: center; */
+}
+
+section.biaoqingimg div.one{
+
+    /* background: rgb(82, 82, 112); */
+    display:flex;
+    justify-content: flex-end;
+}
+section.biaoqingimg div.two{
+    /* background: rgb(82, 82, 112); */
+    display:flex;
+    justify-content: flex-start;
+}
+
+section.biaoqingimg div.three{
+    /* background: rgb(126, 126, 187); */
+    display:flex;
+    justify-content: flex-end;
+}
+
+section.biaoqingimg div.four{
+    /* background: rgb(82, 82, 112); */
+    display:flex;
+    justify-content: flex-start;
+}
+
+/* 图片宽度 */
+section.biaoqingimg div.one img{
+    grid-area:11;
+    max-width: 70%;
+}
+section.biaoqingimg div.two img{
+    grid-area:22;
+    max-width: 70%;
+}
+section.biaoqingimg div.three img{
+    grid-area:33;
+    max-width: 70%;
+}
+section.biaoqingimg div.four img{
+    grid-area:44;
+    max-width: 70%;
+}
+/* 耳环 */
+/*----------------------------------------------------------------------------*/
+section.ear{
+    margin: 40em 0 0 0;
+    grid-area: ear;
+}
+
+section.ear div.content{
+    /* background: rgb(103, 117, 145); */
+    height: 90em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing:border-box;
+
+}
+
+/* 文字内容区*/
+section.ear div.content div.ear-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+}
+
+/* 漂漂耳环了解一下*/
+section.ear div.content div.ear-content p.ear-title{
+    box-sizing:border-box;
+    margin: 0 0 0.2em 0;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 4rem;
+
+    width: 10em;
+    display: inline
+    align-items: center;
+    text-align: center;
+
+    color: #0055FF;
+}
+/* 正文*/
+section.ear div.content div.ear-content p.ear-content{
+    /* background: rgb(92, 104, 128); */
+    box-sizing:border-box;
+    width: 34em;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 150%;
+
+    padding: 0 0 5em 0;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #0055FF;
+
+}
+
+
+/* 图片*/
+section.ear div.content div.ear-img img{
+    /* background: #E43A2F; */
+    width: 80em;
+    margin: 0 0 20em 0;
+}
+
+
+/* footer */
+
+/*----------------------------------------------------------------------------*/
+footer {
+    grid-area: footer;
+    background: rgb(241, 241, 241);
+    display: flex;
+    flex-direction:column;
+    /* justify-content: center; */
+    align-items: flex-start;
+    justify-content: space-around;
+    padding: 0 0 0 15%;
+    height: 80em;
+    position: relative;
+}
+
+/* 链接部分 */
+
+footer div.contact{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+
+}
+
+/* 大文字部分 */
+footer div.content{
+    /* position: absolute;
+    left: 23%;
+    top: 15%; */
+    width: 10em;
+    /* bottom: 10em; */
+    font-style: normal;
+    font-weight: 400;
+    font-size: 4rem;
+    line-height: 150%;
+    text-align: left;
+
+    color: #0055FF;
+}
+
+
+/* 左侧三个链接部分 */
+
+footer div.contact div.contact1{
+    display: flex;
+    flex-direction: column;
+
+    /* position: absolute;
+    left: 23%;
+    top: 65%; */
+    /* bottom: 10em; */
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 200%;
+    text-align: left;
+
+    color: #0055FF;
+}
+
+/* 右侧三个链接部分 */
+
+footer div.contact div.contact2{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 40%;
+    top: 74%;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 200%;
+    text-align: left;
+
+    color: #0055FF;
+}
+
+/* dribbble icon和文字 */
+
+footer div.contact div.contact1 div.dribbble{
+    display: flex;
+    align-items: center;
+}
+
+/* behance icon和文字 */
+footer div.contact div.contact1 div.behance{
+    display: flex;
+    align-items: center;
+}
+
+/* ins icon和文字 */
+footer div.contact div.contact1 div.ins{
+    display: flex;
+    align-items: center;
+}
+
+/* gitbub icon和文字 */
+footer div.contact div.contact2 div.github{
+    display: flex;
+    align-items: center;
+}
+
+/* zhihu icon和文字 */
+footer div.contact div.contact2 div.zhihu{
+    display: flex;
+    align-items: center;
+}
+
+/* 站酷 icon和文字 */
+footer div.contact div.contact2 div.zcool{
+    display: flex;
+    align-items: center;
+}
